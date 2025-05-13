@@ -1,6 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+:root {
+    --bg1: #f3efe0;
+    --bg2: #f9f4ef;
+    --h1: #bfa980;
+    --h2: #c9b99a;
+    --t1: #3b2f2f;
+    --t2: #4b3a2a;
+    --a1: #5c3a47;
+    --a2: #2d3e50;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Uncial Antiqua", system-ui;
+}
 
+body {
+    background-color: var(--bg1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    color: var(--t1)
+}
+
+.content {
+    height: 500px;
+    width: 500px;
+    background-color: var(--h2);
+}
+
+.content p {
+    color: var(--t1);
 }
