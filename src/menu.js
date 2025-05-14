@@ -1,6 +1,6 @@
 // Step 1: Create the header of the page
 const menuHeader = document.createElement("h1")
-menuHeader.textContent = "The Enchanted Fork - Menu"
+menuHeader.textContent = "The Enchanted Menu"
 
 // Step 2: Create a container div for each menu part: Bread-Soup-Main-Dessert-Drinks
 const breadDiv = document.createElement("div")
