@@ -1,24 +1,22 @@
 import "./styles.css"
-import { homeHeader, aboutDiv } from "./homepage"
-import { menuHeader, breadDiv, soupDiv, mainDiv, dessertDiv, drinksDiv } from "./menu"
-import { contactHeader, visitDiv, emailDiv, phoneDiv, openDiv } from "./contact"
+import { addHomeContent } from "./homepage"
+import { addMenuContent } from "./menu"
+import { addContContent } from "./contact"
 
 const contentDiv = document.querySelector(".content")
-// Homepage
-// contentDiv.appendChild(homeHeader)
-// contentDiv.appendChild(aboutDiv)
 
-// Menu Page
-// contentDiv.appendChild(menuHeader)
-// contentDiv.appendChild(breadDiv)
-// contentDiv.appendChild(soupDiv)
-// contentDiv.appendChild(mainDiv)
-// contentDiv.appendChild(dessertDiv)
-// contentDiv.appendChild(drinksDiv)
+const buttons = Array.from(document.querySelectorAll("button"))
+buttons.forEach(button => {
+    button.addEventListener("click", tabSelection)
+})
 
-// Contact Page
-contentDiv.appendChild(contactHeader)
-contentDiv.appendChild(visitDiv)
-contentDiv.appendChild(emailDiv)
-contentDiv.appendChild(phoneDiv)
-contentDiv.appendChild(openDiv)
+function tabSelection(event) {
+    const currentTab = event.target.dataset.content
+    if (currentTab === "menu") {
+        addMenuContent(contentDiv)
+    } else if (currentTab === "contact") {
+        addContContent(contentDiv)
+    } else {
+        addHomeContent(contentDiv)
+    }
+}

@@ -78,4 +78,14 @@ openDiv.appendChild(openp1)
 openDiv.appendChild(openp2)
 openDiv.appendChild(openp3)
 
-export { contactHeader, visitDiv, emailDiv, phoneDiv, openDiv }
+// Step 6: Create and export the function that adds the contact info to the content div
+function addContContent(element) {
+    element.textContent = ""
+    element.appendChild(contactHeader)
+    element.appendChild(visitDiv)
+    element.appendChild(emailDiv)
+    element.appendChild(phoneDiv)
+    element.appendChild(openDiv)
+}
+
+export { addContContent }

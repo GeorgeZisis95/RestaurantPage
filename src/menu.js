@@ -213,5 +213,15 @@ drinksDiv.appendChild(drinksDishOne)
 drinksDiv.appendChild(drinksDishTwo)
 drinksDiv.appendChild(drinksDishThree)
 
-// Step 8: The exported content should be the header and the four dishes-divs
-export { menuHeader, breadDiv, soupDiv, mainDiv, dessertDiv, drinksDiv }
+// Step 8: Create and export the function that adds the menu to the content div
+function addMenuContent(element) {
+    element.textContent = ""
+    element.appendChild(menuHeader)
+    element.appendChild(breadDiv)
+    element.appendChild(soupDiv)
+    element.appendChild(mainDiv)
+    element.appendChild(dessertDiv)
+    element.appendChild(drinksDiv)
+}
+
+export { addMenuContent }

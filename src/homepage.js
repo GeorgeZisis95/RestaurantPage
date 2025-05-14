@@ -23,4 +23,11 @@ aboutDiv.appendChild(p3)
 aboutDiv.appendChild(p4)
 aboutDiv.appendChild(p5)
 
-export { homeHeader, aboutDiv }
+// Step 3: Create and export the function that adds the homepage to the content div
+function addHomeContent(element) {
+    element.textContent = ""
+    element.appendChild(homeHeader)
+    element.appendChild(aboutDiv)
+}
+
+export { addHomeContent }
