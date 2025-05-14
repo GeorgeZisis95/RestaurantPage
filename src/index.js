@@ -1,4 +1,11 @@
 import "./styles.css"
-import { contentDiv } from "./homepage"
+import { textDiv } from "./homepage"
+import { menuHeader, breadDiv, soupDiv, mainDiv, dessertDiv, drinksDiv } from "./menu"
 
-contentDiv
+const contentDiv = document.querySelector(".content")
+contentDiv.appendChild(menuHeader)
+contentDiv.appendChild(breadDiv)
+contentDiv.appendChild(soupDiv)
+contentDiv.appendChild(mainDiv)
+contentDiv.appendChild(dessertDiv)
+contentDiv.appendChild(drinksDiv)
